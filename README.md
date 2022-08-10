@@ -10,7 +10,7 @@
 composer config repositories.best4u-backend vcs [bitbucket-repository-url]
 ```
 ```bash
-composer require best4u/module-backend --no-update
+composer require best4u/module-backend=1.0.2 --no-update
 ```
 ```bash
 composer update
