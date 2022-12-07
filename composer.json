@@ -1,24 +1,24 @@
 {
     "name": "best4u/module-backend",
-    "description": "N/A",
-	"version": "1.0.2",
-    "config": {
-        "sort-packages": true
-    },
-    "require": {
-        "php": "~5.6.0|~7.0.0|~7.1.0|~7.2.0|~7.3.0|~7.4.0"
-    },
-    "type": "magento2-module",
-    "license": [
+    "description": "Best4u Backend module for Magento 2",
+	"type": "magento2-module",
+	"version": "1.0.3",
+	"license": [
         "OSL-3.0",
         "AFL-3.0"
     ],
-    "autoload": {
+	"require": {
+        "php": ">=7.3"
+    },
+	"autoload": {
         "files": [
             "registration.php"
         ],
         "psr-4": {
             "Magento\\Backend\\": ""
         }
+    }
+    "config": {
+        "sort-packages": true
     }
 }
