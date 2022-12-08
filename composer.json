@@ -17,7 +17,7 @@
         "psr-4": {
             "Magento\\Backend\\": ""
         }
-    }
+    },
     "config": {
         "sort-packages": true
     }
