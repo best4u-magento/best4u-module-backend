@@ -15,7 +15,7 @@
             "registration.php"
         ],
         "psr-4": {
-            "Best4u\\Backend\\": ""
+            "Magento\\Backend\\": ""
         }
     },
     "config": {
