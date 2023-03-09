@@ -1,11 +1,12 @@
 <?xml version="1.0"?>
 <!--
 /**
- * Copyright © 2022 Best4u Media B.V. All rights reserved.
+ * Copyright © Best4u Media B.V. All rights reserved.
  */
 -->
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
-    <module name="Best4u_Backend" setup_version="1.0.5">
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <module name="Best4u_Backend" setup_version="1.0.6">
         <sequence>
             <module name="Magento_Backend"/>
             <module name="Magento_Theme"/>
