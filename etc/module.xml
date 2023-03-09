@@ -5,8 +5,8 @@
  */
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
-    <module name="Best4u_Backend" setup_version="1.0.6">
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <module name="Best4u_Backend" setup_version="1.0.7">
         <sequence>
             <module name="Magento_Backend"/>
             <module name="Magento_Theme"/>
