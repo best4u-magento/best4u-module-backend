@@ -1,0 +1,74 @@
+/**
+ * Copyright © Best4u Media B.V. All rights reserved.
+ */
+
+//
+//  Variables
+//  _____________________________________________
+
+@best4u-backend-icons-admin__font-name: 'Best4u Backend';
+@best4u-backend-icons-admin__font-name-path: '@{baseDir}Best4u_Backend/fonts/best4u';
+@best4u-logo-color: #ff7900;
+
+//
+//  Fonts
+//  ---------------------------------------------
+
+.lib-font-face(@family-name: @best4u-backend-icons-admin__font-name, @font-path: @best4u-backend-icons-admin__font-name-path, @font-weight: @font-weight__regular, @font-style: @font-style__base);
+
+//
+//  Icons
+//  ---------------------------------------------
+
+@best4u-backend-icon-logo: '\e900';
+
+//
+//  Menu
+//  _____________________________________________
+
+//
+//  Menu wrapper
+//  ---------------------------------------------
+
+.admin__menu {
+    .level-0 {
+        &.item-best4u-elements {
+            > a {
+                &:before {
+                    content: @best4u-backend-icon-logo;
+                    font-family: @best4u-backend-icons-admin__font-name;
+                }
+            }
+        }
+    }
+}
+
+.config-nav-block {
+    &.best4u-tab {
+        .admin__page-nav-title {
+            &._collapsible {
+                &::after {
+                    top: 26px;
+                }
+            }
+
+            strong {
+                display: block;
+                line-height: 1;
+
+                &:before {
+                    color: @best4u-logo-color;
+                    content: @best4u-backend-icon-logo;
+                    display: inline-block;
+                    font-family: @best4u-backend-icons-admin__font-name;
+                    font-size: 26px;
+                    font-weight: @font-weight__regular;
+                    line-height: 1;
+                    margin-right: 12px;
+                    position: relative;
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+}
