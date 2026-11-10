@@ -7,6 +7,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 ## [1.1.0] - 2026-11-10
 
 ### Added
+- The **Best4u** admin menu is now hidden when it has no child items that are enabled and allowed for the current admin user, instead of being displayed as an empty menu (plugin `Best4u\Backend\Plugin\Backend\Model\Menu\ItemPlugin` on `Magento\Backend\Model\Menu\Item::isDisabled()`, adminhtml area only).
+- Added unit tests for the menu plugin.
 - Declared compatibility with Magento Open Source / Adobe Commerce 2.4.4 – 2.4.9.
 - Declared compatibility with PHP 8.1, 8.2, 8.3, 8.4 and 8.5.
 - Added missing dependencies to `composer.json`: `magento/framework` (used by `registration.php`) and `magento/module-config` (the `system.xml` configuration tab uses its schema).

@@ -13,7 +13,7 @@ A base Magento 2 backend module designed to serve as the foundation for all othe
 
 ## Features
 
-- **Best4u** top-level menu in the Admin Panel (with the Best4u logo icon) that other Best4u extensions add their menu items to
+- **Best4u** top-level menu in the Admin Panel (with the Best4u logo icon) that other Best4u extensions add their menu items to; the menu is hidden automatically when it has no items the current admin user is allowed to see
 - **Best4u Extensions** configuration tab under *Stores > Configuration* that other Best4u extensions add their sections to
 - **Best4u** root ACL resource
 - *Best4u Backend* icon font used for the menu and configuration tab icons
@@ -91,7 +91,7 @@ Example configuration section in a downstream module (`etc/adminhtml/system.xml`
 </section>
 ```
 
-The **Best4u** menu and the **Best4u Extensions** tab only show content once at least one downstream Best4u extension adds items or sections to them.
+The **Best4u** menu is only displayed when it contains at least one menu item that is enabled and allowed for the current admin user (ACL); otherwise it is hidden automatically. The **Best4u Extensions** tab is likewise only displayed by Magento once at least one section is assigned to it.
 
 ## Uninstallation
 
