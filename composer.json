@@ -1,18 +1,26 @@
 {
     "name": "best4u/module-backend",
-    "description": "Best4u Backend module for Magento 2",
+    "description": "Best4u Backend module for Magento 2 - base module for all Best4u Magento 2 extensions",
     "type": "magento2-module",
     "license": [
         "OSL-3.0",
         "AFL-3.0"
     ],
+    "authors": [
+        {
+            "name": "Best4u Media B.V.",
+            "email": "magento@best4u.nl"
+        }
+    ],
     "config": {
         "sort-packages": true
     },
-    "version": "1.0.12",
+    "version": "1.1.0",
     "require": {
-        "php": ">=7.2.0",
-		"magento/module-backend": "*"
+        "php": "~8.1.0||~8.2.0||~8.3.0||~8.4.0||~8.5.0",
+        "magento/framework": "~103.0.4",
+        "magento/module-backend": "~102.0.4",
+        "magento/module-config": "~101.2.4"
     },
     "autoload": {
         "files": [

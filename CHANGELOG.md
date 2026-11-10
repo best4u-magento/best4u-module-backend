@@ -4,6 +4,22 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0] - 2026-11-10
+
+### Added
+- Declared compatibility with Magento Open Source / Adobe Commerce 2.4.4 – 2.4.9.
+- Declared compatibility with PHP 8.1, 8.2, 8.3, 8.4 and 8.5.
+- Added missing dependencies to `composer.json`: `magento/framework` (used by `registration.php`) and `magento/module-config` (the `system.xml` configuration tab uses its schema).
+- Added `authors` section to `composer.json`.
+- Documented the menu, configuration tab and ACL identifiers for downstream modules in `README.md`.
+
+### Changed
+- Replaced the open `php: >=7.2.0` constraint with `~8.1.0||~8.2.0||~8.3.0||~8.4.0||~8.5.0`.
+- Replaced the wildcard `magento/module-backend: *` constraint with `~102.0.4` (Magento 2.4.4 – 2.4.9).
+- Fixed `composer.json` formatting (tab indentation mixed with spaces) and normalized its line endings to LF.
+- Updated `README.md`: supported versions, real repository URL, features list, correct code-block languages, uninstall note.
+- Verified with PHPCS (Magento2 standard) and PHPStan (level max) with no reported issues; verified that the LESS compiles against the Magento UI library.
+
 ## [1.0.12] - 2025-06-11
 
 ### Added

@@ -4,17 +4,25 @@ A base Magento 2 backend module designed to serve as the foundation for all othe
 
 ## Table of Contents
 
+- [Features](#features)
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Uninstallation](#uninstallation)
 - [Support](#support)
 
+## Features
+
+- **Best4u** top-level menu in the Admin Panel (with the Best4u logo icon) that other Best4u extensions add their menu items to
+- **Best4u Extensions** configuration tab under *Stores > Configuration* that other Best4u extensions add their sections to
+- **Best4u** root ACL resource
+- *Best4u Backend* icon font used for the menu and configuration tab icons
+
 ## Requirements
 
-- Magento 2.4.5 or later
-- PHP 7.4 or 8.x
-- Composer 2.x
+- Magento Open Source / Adobe Commerce 2.4.4 – 2.4.9
+- PHP 8.1, 8.2, 8.3, 8.4 or 8.5 (within the range supported by your Magento version)
+- Composer 2.2 or later
 
 ## Installation
 
@@ -22,7 +30,7 @@ Install the module via Composer:
 
 1. Add the repository to your Composer configuration:
 ```bash
-composer config repositories.best4u-backend vcs [repository-url]
+composer config repositories.best4u-module-backend vcs https://github.com/best4u-magento/best4u-module-backend.git
 ```
 2. Require the module (without updating immediately):
 ```bash
@@ -46,16 +54,48 @@ bin/magento cache:flush
 
 ## Usage
 
-Once enabled, downstream modules can declare `Best4u_Backend` as a dependency in their `module.xml`:
-```bash
+Once enabled, downstream modules declare the dependency in their `composer.json`:
+```json
+"require": {
+    "best4u/module-backend": "^1.0"
+}
+```
+and in their `etc/module.xml`:
+```xml
 <sequence>
     <module name="Best4u_Backend"/>
 </sequence>
 ```
 
+The module provides the following identifiers for downstream modules:
+
+| Element | Identifier | Used in |
+|---|---|---|
+| Admin menu root | `Best4u::best4u_elements` | `parent` attribute in `etc/adminhtml/menu.xml` |
+| Configuration tab | `best4u` | `<tab>` element of a section in `etc/adminhtml/system.xml` |
+| ACL root resource | `Best4u_Backend::admin` | `etc/acl.xml` |
+
+Example menu item in a downstream module (`etc/adminhtml/menu.xml`):
+```xml
+<add id="Vendor_Module::config" title="My Extension" translate="title" module="Vendor_Module"
+     sortOrder="10" parent="Best4u::best4u_elements" action="adminhtml/system_config/edit/section/my_section"
+     resource="Vendor_Module::config"/>
+```
+
+Example configuration section in a downstream module (`etc/adminhtml/system.xml`):
+```xml
+<section id="my_section" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+    <label>My Extension</label>
+    <tab>best4u</tab>
+    <resource>Vendor_Module::config</resource>
+</section>
+```
+
+The **Best4u** menu and the **Best4u Extensions** tab only show content once at least one downstream Best4u extension adds items or sections to them.
+
 ## Uninstallation
 
-To remove the module, run the following commands:
+Other Best4u extensions depend on this module, so remove them first. Then run the following commands:
 
 ```bash
 bin/magento module:disable Best4u_Backend
