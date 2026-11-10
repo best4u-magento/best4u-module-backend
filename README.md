@@ -10,6 +10,7 @@ A base Magento 2 backend module designed to serve as the foundation for all othe
 - [Usage](#usage)
 - [Uninstallation](#uninstallation)
 - [Support](#support)
+- [License](#license)
 
 ## Features
 
@@ -109,3 +110,7 @@ bin/magento cache:flush
 ## Support
 
 For questions, bug reports, or contributions, please contact us at [magento@best4u.nl](mailto:magento@best4u.nl) or open an issue in the repository.
+
+## License
+
+This module is proprietary. All rights reserved to Best4u.

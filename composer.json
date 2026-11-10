@@ -2,10 +2,7 @@
     "name": "best4u/module-backend",
     "description": "Best4u Backend module for Magento 2 - base module for all Best4u Magento 2 extensions",
     "type": "magento2-module",
-    "license": [
-        "OSL-3.0",
-        "AFL-3.0"
-    ],
+    "license": "proprietary",
     "authors": [
         {
             "name": "Best4u Media B.V.",

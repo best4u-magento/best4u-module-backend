@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [1.1.1] - 2026-11-10
 
+### Changed
+- Changed the `license` in `composer.json` from `OSL-3.0`/`AFL-3.0` to `proprietary`.
+- Added a License section to `README.md`.
+
 ### Removed
 - Removed the obsolete `setup_version` attribute from `etc/module.xml`. The module has no database setup scripts; Magento 2.3+ treats modules without `setup_version` as up to date.
 
